@@ -1,0 +1,51 @@
+Goal 1 :
+Know the number of survivors in total and percentage
+
+Steps :
+
+|-- Measures - Create - Bins (untuk membuat jarak antar rasio) - to columns
+	|-- Measures - Number of records (untuk menampilkan data jumlah data keseluruhan dari sebuah kolom)
+|-- Drag Age to filter to rows
+	|-- Uncheck null untuk menghilangkan data null
+
+|--Drag Measures - Number of records (again) to rows	
+	|-- Quick table calculation - Percent of Total
+
+|-- Drag Measures to Marks Label
+	|-- Quick table calculation - Percent of Total
+
+|-- Convert Survived to Dimensions
+	|-- Click Marks-All
+		|-- Drag Survived to Colour
+
+
+Goal 2 :
+Know the number of PClass in total and percentage
+|-- Convert PClass to Dimensions
+	|-- Drag to columns
+
+Goals 3 :
+Know the number of Sibling in total and percentage
+|-- Convert Sibling to Dimensions
+	|-- Drag to columns
+
+Goal 4 :
+Know the number of Survived in age's range
+|-- Right click (Age) - create - calculated field - <write code>
+
+-- code :
+if [Age] <=10 THEN '0-10'
+ELSEIF [Age] > 10 and [Age] <=20 then '11-20'
+ELSE '20+'
+END
+	|-- Drop Age from columns and filters
+	|-- Grag Age Bins to columns 
+Goals 5 :
+Know the number of Survived in total and percentage
+|-- Drag Survived to columns
+	|-- Number of records to rows
+		|-- Survived - edit aliases
+
+Goals 6 :
+Create dashboard
+|-- 
